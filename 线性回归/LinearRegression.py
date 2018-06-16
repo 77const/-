@@ -30,7 +30,7 @@ def main():
     diabetes = datasets.load_diabetes()
     # 只使用其中一个特征值(把一个422x10的矩阵提取其中一列变成422x1)
     X = diabetes.data[:, np.newaxis, 2]  # np.newaxis的作用就是在原来的数组上增加一个维度。2表示提取第三列数据
-    print (X.shape)  # 
+    print (X.shape)  # (422, 1)
 
     # 第二步：将数据分为训练集以及测试集
     x_train, x_test = X[:-20], X[-20:]

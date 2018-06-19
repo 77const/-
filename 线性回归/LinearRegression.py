@@ -9,7 +9,7 @@ class LinearRegression():
 
     def fit(self, X, y):         # 训练集的拟合
         X = np.insert(X, 0, 1, axis=1)  # 增加一个维度
-        print (X.shape)        
+        print (X.shape)                 #  (422, 2)    
         X_ = np.linalg.inv(X.T.dot(X))  # 公式求解 -- X.T表示转置，X.dot(Y)表示矩阵相乘
         self.w = X_.dot(X.T).dot(y)     # 返回theta的值
 
